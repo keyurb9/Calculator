@@ -1,0 +1,13 @@
+.digit {
+  width: 80px;
+  margin: 6px;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.function {
+  width: 80px;
+  margin: 6px;
+  background-color: red;
+  font-weight: bold;
+}

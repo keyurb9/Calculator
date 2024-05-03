@@ -1,0 +1,12 @@
+.box {
+  background-color: #dadada;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.title {
+  padding: 4px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}

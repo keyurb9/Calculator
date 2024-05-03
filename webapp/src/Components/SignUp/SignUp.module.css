@@ -1,0 +1,9 @@
+.inp {
+  padding: 8px;
+}
+
+.cardDetails {
+  border: 2px;
+  border-color: black;
+  border-radius: 5px;
+}
