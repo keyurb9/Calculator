@@ -1,0 +1,188 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\services\\stripeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:services\\stripeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\services\\interfaces\\istripeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:services\\interfaces\\istripeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\models\\stripeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:models\\stripeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\db\\clientdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:db\\clientdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|e:\\demo apps\\calculator\\backend\\calculatorapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9589D9B0-766B-4AA4-889D-B8C95E8661E8}|CalculatorAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAASwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:49:25.537Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Controllers\\ClientController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAuwE4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:48:11.987Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IStripeService.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Services\\Interfaces\\IStripeService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IStripeService.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Services\\Interfaces\\IStripeService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IStripeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:25:23.587Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StripeService.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Services\\StripeService.cs",
+              "RelativeDocumentMoniker": "Services\\StripeService.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Services\\StripeService.cs",
+              "RelativeToolTip": "Services\\StripeService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAwEsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:25:02.204Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StripeClient.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Models\\StripeClient.cs",
+              "RelativeDocumentMoniker": "Models\\StripeClient.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Models\\StripeClient.cs",
+              "RelativeToolTip": "Models\\StripeClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T15:03:28.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:48:41.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Client.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "Models\\Client.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\Models\\Client.cs",
+              "RelativeToolTip": "Models\\Client.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:46:28.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientDBContext.cs",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\DB\\ClientDBContext.cs",
+              "RelativeDocumentMoniker": "DB\\ClientDBContext.cs",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\DB\\ClientDBContext.cs",
+              "RelativeToolTip": "DB\\ClientDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:45:36.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-03T11:44:52.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-03T11:42:33.338Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
