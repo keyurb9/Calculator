@@ -1,4 +1,4 @@
-export interface IClientSignUp {
+export interface IClient {
   clientId: number | null;
   name: string;
   email: string;

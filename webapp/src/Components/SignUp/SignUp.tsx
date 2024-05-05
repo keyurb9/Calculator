@@ -12,18 +12,40 @@ import {
 import styles from './SignUp.module.css';
 import { countryList } from '../../Helpers/CountryList';
 import { useRef, useState } from 'react';
-import { IClientSignUp } from '../../Models/ICustomerSignUp';
+import { IClient } from '../../Models/IClient';
 import { settings } from '../../config';
 import axios from 'axios';
-const SignUp = () => {
+import {
+  onlyNumberInput,
+  onlyNumberAndSpaceInput,
+  validateCardNumber,
+  validateEmail,
+  validateName,
+  validatePassword,
+  validateExpiry,
+  validateCVC,
+} from '../../Helpers/Validation';
+
+interface ISignUp {
+  onSignUp: Function;
+}
+
+const SignUp = (props: ISignUp) => {
   const name = useRef<any>();
   const email = useRef<any>();
   const password = useRef<any>();
   const cardNo = useRef<any>();
   const expiration = useRef<any>();
   const cvc = useRef<any>();
-
   const [country, setCountry] = useState<string>('Afghanistan');
+
+  //vlaidation states
+  const [isNameError, setIsNameError] = useState<boolean>(false);
+  const [isEmailError, setIsEmailError] = useState<boolean>(false);
+  const [isPasswordError, setIsPasswordError] = useState<boolean>(false);
+  const [isCardError, setIsCardError] = useState<boolean>(false);
+  const [isExpiryError, setIsExpiryError] = useState<boolean>(false);
+  const [isCvcError, setIsCvcError] = useState<boolean>(false);
 
   const getCountries = () => {
     let menuItems: any = [];
@@ -42,30 +64,85 @@ const SignUp = () => {
     setCountry(event.target.value as string);
   };
 
+  const dataValidation = () => {
+    if (!validateName(name.current.value)) {
+      setIsNameError(true);
+      return false;
+    } else {
+      setIsNameError(false);
+    }
+
+    if (!validateEmail(email.current.value)) {
+      setIsEmailError(true);
+      return false;
+    } else {
+      setIsEmailError(false);
+    }
+
+    if (!validatePassword(password.current.value)) {
+      setIsPasswordError(true);
+      return false;
+    } else {
+      setIsPasswordError(false);
+    }
+
+    if (!validateCardNumber(cardNo.current.value)) {
+      setIsCardError(true);
+      return false;
+    } else {
+      setIsCardError(false);
+    }
+
+    if (!validateExpiry(expiration.current.value)) {
+      setIsExpiryError(true);
+      return false;
+    } else {
+      setIsExpiryError(false);
+    }
+
+    if (!validateCVC(cvc.current.value)) {
+      setIsCvcError(true);
+      return false;
+    } else {
+      setIsCvcError(false);
+    }
+
+    return true;
+  };
+
   const signUpHandler = () => {
-    let client: IClientSignUp = {
+    if (!dataValidation()) {
+      return;
+    }
+
+    let client: IClient = {
       clientId: 0,
       name: name.current.value,
       email: email.current.value,
       password: password.current.value,
       cardNo: cardNo.current.value,
-      expiry: expiration.current.value,
+      expiry: expiration.current.value.replace(/\s/g, ''),
       cvc: cvc.current.value,
       country: country,
     };
 
     axios
-      .post(settings.API_ENDPPOINT + 'Client', client, {
+      .post(settings.API_ENDPPOINT + 'Client/SignUp', client, {
         headers: {
           'Content-Type': 'application/json',
         },
       })
       .then(function (response) {
-        console.log(response);
+        let status = response.status;
+        props.onSignUp(status, client.name);
       })
       .catch(function (error) {
         console.log(error);
+
+        props.onSignUp(error.response.status, client.email);
       });
+
+    //props.onSignUp(200, client.name);
   };
 
   return (
@@ -80,6 +157,10 @@ const SignUp = () => {
         <div className={styles.inp}>
           <TextField
             id="name"
+            error={isNameError}
+            helperText={
+              isNameError ? 'Name must be more than 3 characters' : ''
+            }
             inputRef={name}
             label="Name"
             variant="outlined"
@@ -90,6 +171,10 @@ const SignUp = () => {
         <div className={styles.inp}>
           <TextField
             id="email"
+            error={isEmailError}
+            helperText={
+              isEmailError ? 'Please enter a valid email address' : ''
+            }
             inputRef={email}
             label="E-mail"
             variant="outlined"
@@ -100,7 +185,11 @@ const SignUp = () => {
         <div className={styles.inp}>
           <TextField
             id="password"
+            error={isPasswordError}
             inputRef={password}
+            helperText={
+              isPasswordError ? 'Name must be more than 6 characters' : ''
+            }
             label="Password"
             variant="outlined"
             type="password"
@@ -111,9 +200,16 @@ const SignUp = () => {
         <div className={styles.inp}>
           <TextField
             id="cardNo"
+            error={isCardError}
             inputRef={cardNo}
+            placeholder="0000 0000 0000 0000"
+            helperText={
+              isCardError ? 'Please provide card details in given format' : ''
+            }
+            inputProps={{ maxLength: 19 }}
             label="Card Number"
             variant="outlined"
+            onKeyDown={onlyNumberAndSpaceInput}
             fullWidth
           />
         </div>
@@ -128,12 +224,27 @@ const SignUp = () => {
         >
           <TextField
             id="expiration"
+            error={isExpiryError}
             inputRef={expiration}
+            placeholder="DD MM"
+            helperText={
+              isExpiryError ? 'Please provide expiry in given format' : ''
+            }
             label="Expiration"
             variant="outlined"
             inputProps={{ maxLength: 5 }}
+            onKeyDown={onlyNumberAndSpaceInput}
           />
-          <TextField id="cvc" inputRef={cvc} label="CVC" variant="outlined" />
+          <TextField
+            id="cvc"
+            error={isCvcError}
+            inputRef={cvc}
+            helperText={isCvcError ? 'CVC must be 3 digit' : ''}
+            label="CVC"
+            variant="outlined"
+            inputProps={{ maxLength: 3 }}
+            onKeyDown={onlyNumberInput}
+          />
         </Box>
 
         <div className={styles.inp}>

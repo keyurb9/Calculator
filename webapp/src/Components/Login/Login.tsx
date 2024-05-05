@@ -5,23 +5,18 @@ import SignUp from '../SignUp/SignUp';
 
 interface SimpleDialogProps {
   open: boolean;
-  selectedValue: string;
-  onClose: (value: string) => void;
+  onClose: () => void;
+  onSignIn: Function;
+  onSignUp: Function;
 }
 
-const emails = ['username@gmail.com', 'user02@gmail.com'];
-
 const LoginDialog = (props: SimpleDialogProps) => {
-  const { onClose, selectedValue, open } = props;
+  const { open, onClose, onSignIn, onSignUp } = props;
   const [tab, setTab] = useState(0);
 
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose();
   };
-
-  //   const handleListItemClick = (value: string) => {
-  //     onClose(value);
-  //   };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTab(newValue);
@@ -31,34 +26,53 @@ const LoginDialog = (props: SimpleDialogProps) => {
     <Dialog fullWidth onClose={handleClose} open={open}>
       <Tabs value={tab} variant="fullWidth" onChange={handleChange} centered>
         <Tab label="Sign In" />
-        <Tab label="sIGN Up" />
+        <Tab label="Sign Up" />
       </Tabs>
-      {tab === 0 && <SignIn></SignIn>}
-      {tab === 1 && <SignUp></SignUp>}
+      {tab === 0 && <SignIn onSignIn={onSignIn}></SignIn>}
+      {tab === 1 && <SignUp onSignUp={onSignUp}></SignUp>}
     </Dialog>
   );
 };
 
-const Login = () => {
+interface ILogin {
+  onSignIn: Function;
+  onSignUp: Function;
+  isRegistered: boolean;
+}
+
+const Login = (props: ILogin) => {
+  const { onSignIn, onSignUp, isRegistered } = props;
   const [open, setOpen] = useState<boolean>(false);
-  const [selectedValue, setSelectedValue] = useState(emails[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = (value: string) => {
+  const handleClose = () => {
     setOpen(false);
-    setSelectedValue(value);
   };
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>Go Premium</Button>
+      <Button disabled={isRegistered} onClick={handleClickOpen}>
+        Go Premium
+      </Button>
       <LoginDialog
-        selectedValue={selectedValue}
         open={open}
         onClose={handleClose}
+        onSignIn={(status: number, name: string) => {
+          if (status === 200) {
+            handleClose();
+          }
+          props.onSignIn(status, name);
+        }}
+        onSignUp={(status: number, name: string) => {
+          if (status === 200) {
+            handleClose();
+          }
+
+          props.onSignUp(status, name);
+        }}
       />
     </div>
   );

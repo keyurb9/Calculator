@@ -2,8 +2,14 @@ import { Box, Button, TextField } from '@mui/material';
 
 import styles from './SignIn.module.css';
 import { useRef } from 'react';
+import axios from 'axios';
+import { settings } from '../../config';
+import { IClient } from '../../Models/IClient';
 
-const SignIn = () => {
+interface ISignIn {
+  onSignIn: Function;
+}
+const SignIn = (props: ISignIn) => {
   const email = useRef<any>();
   const password = useRef<any>();
 
@@ -11,8 +17,19 @@ const SignIn = () => {
     let userEmail = email.current.value;
     let userPassword = password.current.value;
 
-    console.log(userEmail);
-    console.log(userPassword);
+    axios
+      .get(
+        settings.API_ENDPPOINT + `Client/SignIn/${userEmail}/${userPassword}`
+      )
+      .then(function (response) {
+        let status = response.status;
+        let client: IClient = response.data;
+        props.onSignIn(status, client.name);
+      })
+      .catch(function (error) {
+        console.log(error);
+        props.onSignIn(error.response.status, undefined);
+      });
   };
 
   return (

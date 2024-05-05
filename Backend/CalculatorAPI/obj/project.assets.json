@@ -4837,11 +4837,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
+      "projectUniqueName": "E:\\Demo Apps\\Calculator\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
       "projectName": "CalculatorAPI",
-      "projectPath": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
+      "projectPath": "E:\\Demo Apps\\Calculator\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
       "packagesPath": "C:\\Users\\bhavs\\.nuget\\packages\\",
-      "outputPath": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\obj\\",
+      "outputPath": "E:\\Demo Apps\\Calculator\\Calculator\\Backend\\CalculatorAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bhavs\\AppData\\Roaming\\NuGet\\NuGet.Config",

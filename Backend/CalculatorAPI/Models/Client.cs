@@ -4,6 +4,7 @@ namespace CalculatorAPI.Models
 {
     public class Client
     {
+        [Key]
         public int ClientId { get; set; }
 
         public string Name { get; set; }
@@ -12,7 +13,7 @@ namespace CalculatorAPI.Models
 
         public string Password { get; set; }
 
-        public long CardNo { get; set; }
+        public string CardNo { get; set; }
 
         public string Expiry { get; set; }
 

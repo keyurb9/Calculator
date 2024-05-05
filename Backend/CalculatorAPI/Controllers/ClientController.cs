@@ -41,19 +41,42 @@ namespace CalculatorAPI.Controllers
             return client;
         }
 
-        // POST: api/Client
+        // GET: Client/signin/keyur2k2@gmail.com/dummy12345
+        [HttpGet]
+        [Route("SignIn/{email}/{password}")]
+        public ActionResult<Client> SignIn(string email, string password)
+        {
+            var client = _clientContext.Client.FirstOrDefault(x => x.Email.Equals(email) && x.Password.Equals(password));
+            if (client == null)
+            {
+                return NotFound();
+            }
+            return client;
+        }
+
+        // POST: api/SignUp
         [HttpPost]
-        public ActionResult<Client> CreateClient(Client client)
+        [Route("SignUp")]
+        public ActionResult<Client> SignUp(Client client)
         {
             if (client == null)
             {
                 return BadRequest();
             }
+
             try
             {
+                var existingClient = _clientContext.Client.FirstOrDefault(x => x.Email.Equals(client.Email));
+                if (existingClient != null)
+                {
+                    return Conflict("User already exists");
+                }
+
                 string stripeId = createStripeCustomer(client);
+                //string stripeId = "Hello";
                 if (stripeId.Length > 0)
                 {
+                    client.CardNo = client.CardNo.Substring(client.CardNo.Length - 4);
                     _clientContext.Client.Add(client);
                     _clientContext.SaveChanges();
                     CreatedAtAction(nameof(GetClient), new { id = client.ClientId }, client);

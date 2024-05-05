@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0MJB93eKWb6LJecwzCFwkhVRHjHizgyH5zS42KdUUTO64XJKI2lr4UhlAgduckOKZBB3dzLUhdFIUHQPUqrbKg==",
+  "dgSpecHash": "2L5CuQadBaoZ+Xa8dozIhrXvgl99/DmXmbK1eVNPFNBYfqDxpbS0nSNNaxYLiXAdsUXxVH2NHde5ergDXOvMIA==",
   "success": true,
-  "projectFilePath": "E:\\Demo Apps\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
+  "projectFilePath": "E:\\Demo Apps\\Calculator\\Calculator\\Backend\\CalculatorAPI\\CalculatorAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bhavs\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\bhavs\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

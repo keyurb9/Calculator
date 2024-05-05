@@ -1,16 +1,42 @@
-import { Box, Container, Divider, Grid } from '@mui/material';
+import { Box, Container, Divider, Grid, Snackbar } from '@mui/material';
 
 import style from './Basecalculator.module.css';
 import Keypad from '../KeyPad/Keypad';
 import Display from '../Display/Display';
 import { useEffect, useState } from 'react';
 import Login from '../Login/Login';
+import LoginAlert from '../LoginAlert/LoginAlert';
 
 const BaseCalculator = () => {
   const [display, setDisplay] = useState<string>('0');
   const [operand1, setOperand1] = useState<number>(0);
   const [operand2, setOperand2] = useState<number>(0);
   const [lastOperation, setLastOperation] = useState<string>('');
+
+  const [isRegistered, setIsRegistered] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>('');
+
+  const onSignIn = (status: number, userName: string) => {
+    if (status === 200) {
+      setIsRegistered(true);
+      setMessage(`Welcome back ${userName} !`);
+    } else {
+      setMessage('Incorrect email address or password');
+    }
+  };
+
+  const onSignUp = (status: number, userName: string) => {
+    if (status === 200) {
+      setIsRegistered(true);
+      setMessage(`Hello ${userName}, your registration is successfull.`);
+    } else if (status === 409) {
+      setMessage(`A user with email address ${userName} already exists`);
+    }
+  };
+
+  const onAlertClose = () => {
+    setMessage('');
+  };
 
   let resetDisplay = () => {
     setDisplay('0');
@@ -153,15 +179,26 @@ const BaseCalculator = () => {
             </Grid>
 
             <Grid item alignContent={'center'} xs={3}>
-              <Login></Login>
+              <Login
+                onSignIn={onSignIn}
+                onSignUp={onSignUp}
+                isRegistered={isRegistered}
+              ></Login>
             </Grid>
           </Grid>
         </Box>
         <Divider orientation="horizontal" />
+
         <Container maxWidth={'md'}>
+          {message !== '' && (
+            <LoginAlert
+              message={message}
+              onAlertClose={onAlertClose}
+            ></LoginAlert>
+          )}
           <Display value={display?.toString() ?? ''}></Display>
           <Keypad
-            isPremiumUser={false}
+            isPremiumUser={isRegistered}
             userInput={userInput}
             funcInput={funcInput}
           ></Keypad>
